@@ -1,13 +1,10 @@
-Your .gitignore file already covers the most common files and folders for a Node.js project using npm. No changes are needed for npm support. Here’s a quick summary of what’s relevant for npm:
 
-- node_modules/ (npm dependencies)
-- dist/, build/ (build outputs)
-- .env* (environment files)
-- npm-debug.log*, .npm/ (npm logs and cache)
-- coverage/, *.log, *.tgz, *.gz, *.zip, *.bak, *.swp, *.tmp (miscellaneous)
-
-You’re all set for npm!
-
+# Dependency directories
 node_modules/
+
+# Build output
 dist/
+build/
+
+# Environment files
 .env
