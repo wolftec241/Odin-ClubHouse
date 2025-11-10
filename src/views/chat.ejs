@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+</head>
+<body>
+    <% if (user) { %>
+        <p>Hello, <%= user.username %>! You are in the chat room.</p>
+    <% } else { %>
+        <p>You are in the chat room as an anonymous user.</p>
+    <% } %>
+    <div class="chat-messages">
+        <% messages.forEach(function(message) { %>
+            <div class="message">
+                <% if (message.username) { %>
+                    <strong><%= message.username %>:</strong>
+                <% } else { %>
+                    <strong>Anonymous:</strong>
+                <% } %>
+                <span><%= message.content %></span>
+            </div>
+        <% }); %>
+    </div>
+    <% if( user) {%>
+    <form action="/chat" method="POST">
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message" required>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+    <% } else { %>
+        <p>Please <a href="/login">login</a> to send messages.</p>
+    <% } %>
+
+    <p>Want to return to main page? <a href="/">Click here</a></p>
+</body>
+</html>

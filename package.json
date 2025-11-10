@@ -1,0 +1,47 @@
+{
+  "name": "odin-clubhouse",
+  "version": "1.0.0",
+  "description": "Basic clubhouse where members can write anonymous posts that foreign will don't know who write it",
+  "homepage": "https://github.com/wolftec241/Odin-ClubHouse#readme",
+  "bugs": {
+    "url": "https://github.com/wolftec241/Odin-ClubHouse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolftec241/Odin-ClubHouse.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "./src/app.ts",
+  "scripts": {
+    "dev": "nodemon ./src/app.ts",
+    "startUpDB": "ts-node ./src/db/startUpDB.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/connect-flash": "^0.0.40",
+    "bcryptjs": "^3.0.2",
+    "connect-flash": "^0.1.1",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.5",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^24.9.2",
+    "@types/passport": "^1.0.17",
+    "@types/passport-local": "^1.0.38",
+    "@types/pg": "^8.15.6",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Optional: link to your CSS -->
+</head>
+<body>
+  <div class="register-container">
+    <h2>Register</h2>
+    <% if (typeof error !== 'undefined') { %>
+      <div class="error-message"><%= error %></div>
+    <% } %>
+    <form action="/register" method="POST">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <p class="info-text">Password must be at least 6 characters long.</p>
+      </div>
+      
+      <button type="submit">register</button>
+    </form>
+    <p>Have account? <a href="/login">Login here</a></p>
+    <p>Want to return to main page? <a href="/">Click here</a></p>
+  </div>
+</body>
+</html>
